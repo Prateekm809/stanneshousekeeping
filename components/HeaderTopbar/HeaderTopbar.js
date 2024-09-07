@@ -18,15 +18,15 @@ const HeaderTopbar = () => {
                     <div className="col col-lg-5 col-md-7 col-sm-12 col-12">
     <div className="contact-info">
       <ul>
-      
+      <li><Link href="/appointment">  <i className='fa-solid fa-arrow-right text-blue-600'></i> &nbsp; Get a quote</Link></li>
         <li>
           <a href="https://www.facebook.com/stanneshousekeeping" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faFacebook} size="2x" />
+            <FontAwesomeIcon icon={faFacebook}/>
           </a>
         </li>
         <li>
           <a href="https://www.instagram.com/stanneshousekeeping/" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faInstagram} size="2x" />
+            <FontAwesomeIcon icon={faInstagram}  />
           </a>
         </li>
       </ul>

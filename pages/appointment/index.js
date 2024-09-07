@@ -3,15 +3,15 @@ import Navbar from '../../components/Navbar/Navbar'
 import PageTitle from '../../components/pagetitle/PageTitle'
 import Footer from '../../components/footer/Footer.js'
 import Scrollbar from '../../components/scrollbar/scrollbar'
-import AppointmentS2 from '../../components/AppointmentS2/AppointmentS2.js';
+import Appointment from '../../components/Appointment/Appointment.js';
 
 
 const AppointmentPage =() => {
     return(
         <Fragment>
             <Navbar/>
-            <PageTitle pageTitle={'Appointment'} pagesub={'Appointment'}/> 
-            <AppointmentS2/>
+            <PageTitle pageTitle={'GET A QUOTE'} pagesub={'GET_A_QUOTE'}/> 
+            <Appointment/>
             <Footer/>
             <Scrollbar/>
         </Fragment>

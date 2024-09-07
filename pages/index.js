@@ -11,6 +11,7 @@ import Testimonial from '../components/Testimonial/Testimonial';
 import BlogSection from '../components/BlogSection/BlogSection.js';
 import PartnerSection from '../components/PartnerSection/PartnerSection';
 import Footer from '../components/footer/Footer.js';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 const HomePage = () => {

@@ -51,13 +51,13 @@ const Header = (props) => {
                                         <li className="menu-item-has-children">
                                             <Link href="/service">Services</Link>
                                             <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="/service">Service</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/service-single/Housekeeping">HouseKeeping</Link></li>
                                                 <li><Link onClick={ClickHandler} href="/service-s2">Service style 2</Link></li>
                                                 <li><Link onClick={ClickHandler} href="/service-single/Carpet">Service Single</Link></li>
                                             </ul>
                                         </li>
                                         <li className="menu-item-has-children">
-                                            <Link href="/project">Pages</Link>
+                                            <Link href="/locations">locations</Link>
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href="/project">Project</Link></li>
                                                 <li><Link onClick={ClickHandler} href="/project-single/Express">Project Single</Link></li>

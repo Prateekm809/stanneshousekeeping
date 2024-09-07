@@ -64,7 +64,7 @@ const Commercial = () => {
     return (
         <div className="wpo-service-wrap wpo-service-slide">
             <Slider {...settings}>
-                {Services.slice(6, 12).map((service, srv) => (
+                {Services.slice(5, 12).map((service, srv) => (
                     <div className="wpo-service-item" key={srv}>
                         <div className="wpo-service-icon">
                             <div className="icon">

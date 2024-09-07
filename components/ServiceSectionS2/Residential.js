@@ -22,7 +22,7 @@ const Commercial = (props) => {
                                 </div>
                             </div>
                             <div className="wpo-service-text">
-                                <h2><Link onClick={ClickHandler} href="/service-single/[slug]" as={`/service-single/${service.slug}`}>{service.sTitle}</Link></h2>
+                                <h2><Link onClick={ClickHandler} href="/service-single/[slug]" as={`/service-single/${service.slug}`}>{service.slug}</Link></h2>
                                 <p>{service.description}</p>
                             </div>
                         </div>

@@ -1,24 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
-import cimg from '/public/images/conatct1.png'
+import cimg from '/public/images/conatct1.png';
 import Image from 'next/image';
 
-
 const Appointment = () => {
-
 
     const [forms, setForms] = useState({
         name: '',
         email: '',
-        subject: '',
+        company: '',
         phone: '',
-        message: ''
+        postcode: '',
+        subject: '',
     });
+
     const [validator] = useState(new SimpleReactValidator({
         className: 'errorMessage'
     }));
+
     const changeHandler = e => {
-        setForms({ ...forms, [e.target.name]: e.target.value })
+        setForms({ ...forms, [e.target.name]: e.target.value });
         if (validator.allValid()) {
             validator.hideMessages();
         } else {
@@ -33,15 +34,15 @@ const Appointment = () => {
             setForms({
                 name: '',
                 email: '',
-                subject: '',
+                company: '',
                 phone: '',
-                message: ''
-            })
+                postcode: '',
+                subject: ''
+            });
         } else {
             validator.showMessages();
         }
     };
-
 
     return (
         <section className="wpo-contact-section section-padding">
@@ -51,11 +52,11 @@ const Appointment = () => {
                         <div className="col-lg-6 col-md-12 col-12">
                             <div className="wpo-contact-form-area">
                                 <div className="wpo-section-title-s2">
-                                    <h2>Make An Appointment</h2>
+                                    <h2>GET A QUOTE</h2>
                                 </div>
                                 <form onSubmit={(e) => submitHandler(e)} className="contact-validation-active" >
                                     <div className="row">
-                                        <div className="col col-lg-6 col-12">
+                                        <div className="col col-lg-12 col-12">
                                             <div className="form-field">
                                                 <input
                                                     className="form-control"
@@ -68,7 +69,7 @@ const Appointment = () => {
                                             </div>
                                             {validator.message('name', forms.name, 'required|alpha_space')}
                                         </div>
-                                        <div className="col col-lg-6 col-12">
+                                        <div className="col col-lg-12 col-12">
                                             <div className="form-field">
                                                 <input
                                                     className="form-control"
@@ -85,13 +86,39 @@ const Appointment = () => {
                                             <div className="form-field">
                                                 <input
                                                     className="form-control"
+                                                    value={forms.company}
+                                                    type="text"
+                                                    name="company"
+                                                    onBlur={(e) => changeHandler(e)}
+                                                    onChange={(e) => changeHandler(e)}
+                                                    placeholder="Your Company" />
+                                                {validator.message('company', forms.company, 'required')}
+                                            </div>
+                                        </div>
+                                        <div className="col col-lg-6 col-12">
+                                            <div className="form-field">
+                                                <input
+                                                    className="form-control"
                                                     value={forms.phone}
                                                     type="phone"
                                                     name="phone"
                                                     onBlur={(e) => changeHandler(e)}
                                                     onChange={(e) => changeHandler(e)}
-                                                    placeholder="Your phone" />
+                                                    placeholder="Your Phone" />
                                                 {validator.message('phone', forms.phone, 'required|phone')}
+                                            </div>
+                                        </div>
+                                        <div className="col col-lg-6 col-12">
+                                            <div className="form-field">
+                                                <input
+                                                    className="form-control"
+                                                    value={forms.postcode}
+                                                    type="text"
+                                                    name="postcode"
+                                                    onBlur={(e) => changeHandler(e)}
+                                                    onChange={(e) => changeHandler(e)}
+                                                    placeholder="Your Post Code" />
+                                                {validator.message('postcode', forms.postcode, 'required')}
                                             </div>
                                         </div>
                                         <div className="col col-lg-6 col-12">
@@ -100,31 +127,14 @@ const Appointment = () => {
                                                     onBlur={(e) => changeHandler(e)}
                                                     onChange={(e) => changeHandler(e)}
                                                     value={forms.subject}
-                                                    type="text"
                                                     name="subject">
                                                     <option>Choose a Service</option>
-                                                    <option>Residential Cleaning</option>
+                                                    <option>Housekeeping</option>
                                                     <option>Commercial Cleaning</option>
-                                                    <option>Office Cleaning</option>
-                                                    <option>Home Cleaning</option>
-                                                    <option>Shop Cleaning</option>
-                                                    <option>Road Cleaning</option>
-                                                    <option>car Cleaning</option>
+                                                    <option>Serviced Apartments</option>
                                                 </select>
-                                                {validator.message('subject', forms.subject, 'required|alpha_space')}
+                                                {validator.message('subject', forms.subject, 'required')}
                                             </div>
-                                        </div>
-                                        <div className="col fullwidth col-lg-12 ">
-                                            <textarea
-                                                className="form-control"
-                                                onBlur={(e) => changeHandler(e)}
-                                                onChange={(e) => changeHandler(e)}
-                                                value={forms.message}
-                                                type="text"
-                                                name="message"
-                                                placeholder="Message">
-                                            </textarea>
-                                            {validator.message('message', forms.message, 'required')}
                                         </div>
                                     </div>
                                     <div className="submit-area">

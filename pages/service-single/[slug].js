@@ -25,7 +25,7 @@ const ServiceSinglePage =(props) => {
     return(
         <Fragment>
             <Navbar hclass={'wpo-header-style-5'}/>
-            <PageTitle pageTitle={`${serviceDetails?.sTitle} Cleaning `} pagesub={'Project'}/> 
+            <PageTitle pageTitle={`${serviceDetails?.sTitle} Services`} pagesub={'Services'}/> 
             <section className="wpo-service-single-section section-padding">
                 <div className="container">
                     <div className="row">
@@ -36,7 +36,7 @@ const ServiceSinglePage =(props) => {
                                 </div>
                                 <div className="wpo-service-single-content">
                                     <div className="wpo-service-single-content-des">
-                                        <h2>{`${serviceDetails?.sTitle} Cleaning `}</h2>
+                                        <h2>{`${serviceDetails?.sTitle} Services `}</h2>
                                         <p>{serviceDetails?.description}</p>
                                         <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise.</p>
                                         <div className="wpo-service-single-sub-img">
