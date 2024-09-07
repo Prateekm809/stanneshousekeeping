@@ -3,8 +3,10 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Collapse from "@mui/material/Collapse";
 import Link from "next/link";
+import { useRouter } from 'next/router';
 
 const menus = [
+    
     {
         id: 1,
         title: 'Home',
@@ -163,7 +165,7 @@ const menus = [
 
 
 const MobileMenu = () => {
-
+    const router = useRouter();
     const [openId, setOpenId] = useState(0);
     const [menuActive, setMenuState] = useState(false);
 
@@ -179,36 +181,36 @@ const MobileMenu = () => {
                 </div>
 
                 <ul className="responsivemenu">
-                    {menus.map((item, mn) => {
-                        return (
-                            <ListItem className={item.id === openId ? 'active' : null}  key={mn}>
-                                {item.submenu ?
-                                    <Fragment>
-                                        <p onClick={() => setOpenId(item.id === openId ? 0 : item.id)}>{item.title}
-                                          <i className={item.id === openId ? 'fa fa-angle-up' : 'fa fa-angle-down'}></i>
-                                        </p>
-                                        <Collapse in={item.id === openId} timeout="auto" unmountOnExit>
-                                            <List className="subMenu">
-                                                <Fragment>
-                                                    {item.submenu.map((submenu, i) => {
-                                                        return (
-                                                            <ListItem key={i}>
-                                                                <Link onClick={ClickHandler} exact activeclassname="active"
-                                                                    href={submenu.link}>{submenu.title}</Link>
-                                                            </ListItem>
-                                                        )
-                                                    })}
-                                                </Fragment>
-                                            </List>
-                                        </Collapse>
-                                    </Fragment>
-                                    : <Link exact activeclassname="active"
-                                        href={item.link}>{item.title}</Link>
-                                }
-                            </ListItem>
-                        )
-                    })}
-                </ul>
+            {menus.map((item, mn) => (
+                <ListItem className={item.id === openId ? 'active' : null} key={mn}>
+                    {item.submenu ? (
+                        <Fragment>
+                            <p onClick={() => setOpenId(item.id === openId ? 0 : item.id)}>
+                                {item.title}
+                                <i className={item.id === openId ? 'fa fa-angle-up' : 'fa fa-angle-down'}></i>
+                            </p>
+                            <Collapse in={item.id === openId} timeout="auto" unmountOnExit>
+                                <List className="subMenu">
+                                    {item.submenu.map((submenu, i) => (
+                                        <ListItem key={i}>
+                                            <Link href={submenu.link} legacyBehavior>
+                                                <a onClick={ClickHandler}>
+                                                    {submenu.title}
+                                                </a>
+                                            </Link>
+                                        </ListItem>
+                                    ))}
+                                </List>
+                            </Collapse>
+                        </Fragment>
+                    ) : (
+                        <Link href={item.link} legacyBehavior>
+                            <a>{item.title}</a>
+                        </Link>
+                    )}
+                </ListItem>
+            ))}
+        </ul>
 
             </div>
 
