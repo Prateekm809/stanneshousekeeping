@@ -48,7 +48,7 @@ const BlogSingle = (props) => {
                                     <blockquote>
                                         {BlogDetails?.quote}
                                     </blockquote>
-                                    <p>{BlogDetails.more}</p>
+                                    <p>{BlogDetails?.more}</p>
 
                                   
                                 </div>
