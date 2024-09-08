@@ -100,7 +100,7 @@ const Header = (props) => {
                                    <Search/>
 
                                     <div className="close-form">
-                                        <a onClick={ClickHandler} className="theme-btn" href="tel:+6494461709"> <i className="fa fa-phone"
+                                        <a onClick={ClickHandler} className="theme-btn" href="tel:020 3397 749"> <i className="fa fa-phone"
                                             aria-hidden="true"></i>
                                             <span>Get a Quote</span> 020 3397 7495</a>
                                     </div>

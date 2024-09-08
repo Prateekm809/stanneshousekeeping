@@ -19,17 +19,17 @@ const testimonial = [
     {
         Des: "St. Anne’s Group has been cleaning our facility since June 2004. During this time, St. Anne’s Group has never missed a day of service. We are a seven day a week operation that trains pilots from all over the world. In addition to our classrooms and offices, St. Anne’s Group also cleans all restrooms, hallways, lobbies and break areas. St. Anne’s Group is always flexible when it comes to cleaning time changes or extra duties. ",
         Title: 'Karen Curling',
-        Sub: "CEO & Founder",
+        
     },
     {
         Des: "I would, and often do, recommend St. Anne’s Group as a provider of security services. They are adaptable, commercially aware and completely comprehend the commercial realities of the late night sector. They are reputable, reliable and respected by local authorities and institutions and moreover, they are a pleasure to work with.",
         Title: 'Ken Williamson',
-        Sub: "CEO & Founder",
+       
     },
     {
         Des: "My wife and I have been relying on St. Anne’s Group for the past decade and have always been pleased with the personnel provided to us for our housekeeping needs. The staff is reliable, thorough, ready to provide us with any special requirements that we may have regarding shutters, windows, fragile glass object, etc. St. Anne’s Group is also flexible when it comes to scheduling in order to meet the household’s needs. If we need to change, or there is a need to substitute someone on a temporary basis.",
         Title: 'Rita Marshall',
-        Sub: "CEO & Founder",
+       
     }
 ]
 
@@ -41,8 +41,7 @@ const Testimonial = () => {
                     <div className="col-lg-5">
                         <div className="wpo-section-title">
                             <h2>What Clients Say?</h2>
-                            <p>It was popularised in the with the release desktop
-                                publishing software like versions .</p>
+                            <p>Read the reviews of our clients.</p>
                         </div>
                     </div>
                 </div>
